@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Gagalin';
+  src: url("fonts/gagalin.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Swist';
+  src: url("fonts/swistbink/Swistblnk Banthers.otf") format("opentype"), url("fonts/swistbink/Swistblnk Banthers.ttf") format("truetype"); }
+.default-background {
+  background-color: #d6d5da; }
+
+.display {
+  font-family: Gagalin;
+  font-size: 5em;
+  color: #85af1b;
+  text-align: center; }
+
+/*# sourceMappingURL=main.css.map */
