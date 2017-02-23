@@ -1,19 +1,9 @@
-@import 'typography';
-$yellow: #f4d06f;
-$green: #85af1b;
-$greengray: #abbdb1;
-$blue: #3f4f5e;
-$gray: #d6d5da;
 
 
-.default-background {
-	background-color: $gray;
-
-
-}
-.display {
-    font-family: Gagalin;
-		font-size: 5em;
-		color: $green;
-		text-align: center;
-}
+@import './partials/_normalize';
+@import './partials/_typography';
+@import './partials/_colors';
+@import './partials/_buttons';
+@import './partials/_grid';
+@import './partials/_variables';
+@import './partials/_global';

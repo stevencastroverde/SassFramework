@@ -1,0 +1,41 @@
+@import './_personalWebsitePalette';
+
+$yellow: $color3;
+$ivory-black: hsl(210, 25%, 15%);
+$blueberry: $color1;
+$appricot: $color2;
+$applecore: $color4;
+$blackish: hsl(300, 2%, 13%);
+$off-wht: $color5;
+
+$palettes: (
+  yellow: (
+    base: $yellow,
+    light: lighten($yellow, 10%),
+    dark: darken($yellow, 10%)
+    ),
+    ivory-black: (
+      base: $ivory-black,
+      light: lighten($ivory-black, 10%),
+      dark: darken($ivory-black, 10%)
+    ),
+    blueberry: (
+      base: $blueberry,
+      light: lighten($blueberry, 10%),
+      dark: darken($blueberry, 10%)
+    ),
+    appricot: (
+      base: $appricot,
+      light: lighten($appricot, 10%),
+      dark: darken($appricot,10%)
+      ),
+    applecore: (
+      base: $applecore,
+      light:lighten($applecore,10%),
+      dark: darken($applecore,10%)
+    )
+);
+// Palette function, to use color:palette(color, light/dark)
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+  }

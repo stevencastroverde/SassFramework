@@ -1,0 +1,46 @@
+@mixin btn-theme($btn-color) {
+  border-color: darken($btn-color, 20%);
+  background-color: $btn-color;
+&:hover {
+   background-color: darken($btn-color, 10%);
+   box-shadow: 0 .125em $off-wht, inset 0 .063em $off-wht, inset 0 -.188em lighten($btn-color, 2%);
+}
+&:active {
+   box-shadow: 0 .063em $off-wht, inset 0 0 1.094em darken($btn-color, 40%), inset 0 .063em darken($btn-color, 20%),inset 0 -0.188em darken($btn-color, 60%);
+}
+}
+.btn {
+	display: inline-block;
+	margin: 1rem;
+	padding: .938em 1.875em;
+	border: .094em solid;
+	border-radius: .5em;
+	box-shadow: 0 .375em .313em -1em $blackish, inset 0 .063em $off-wht, inset 0 -.188em rgba(black,.15);
+	color: #FFF;
+	font: bold 1.8rem ,sans-serif;
+   transition: .3s ease-in-out;
+	text: {
+		transform: uppercase;
+		decoration: none;
+		shadow: 0 .063em $blackish;
+	}
+  cursor:pointer;
+  &.btn-big {
+    width: 70%;
+    height: auto;
+  }
+  &.btn-small {
+    width: 10%;
+    height: auto;
+  }
+}
+
+.appricot-btn {
+  @include btn-theme($appricot);
+};
+.yellow-btn {
+  @include btn-theme($yellow);
+};
+.ivoryblack-btn {
+  @include btn-theme($ivory-black);
+};
