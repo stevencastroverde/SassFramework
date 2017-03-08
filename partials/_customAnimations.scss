@@ -1,0 +1,79 @@
+
+@mixin animation(){
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@mixin effect($effect) {
+  -webkit-animation-name:$effect;
+  animation-name:$effect;
+}
+.view-container{
+  position: relative;
+}
+#view.ng-enter,
+#view.ng-leave {
+  background: #efefef;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#view.ng-enter{
+  @include animation();
+  @include effect(slideInLeft);
+  z-index: 100;
+}
+
+#view.ng-leave{
+  @include animation();
+  @include effect(slideOutRight);
+  z-index: 99;
+}
+// individual view transitions
+#view.page-work.ng-enter{
+  @include animation();
+  @include effect(fadeInRight);
+  z-index: 100;
+}
+
+#view.page-work.ng-leave{
+  @include animation();
+  @include effect(fadeOutLeft);
+  z-index: 99;
+}
+
+#view.page-contact.ng-enter{
+  @include animation();
+  @include effect(slideInUp);
+  z-index: 100;
+}
+
+#view.page-contact.ng-leave{
+  @include animation();
+  @include effect(slideOutDown);
+  z-index: 99;
+}
+#view.page-about.ng-enter{
+  @include animation();
+  @include effect(bounceIn);
+  z-index: 100;
+}
+
+#view.page-about.ng-leave{
+  @include animation();
+  @include effect(bounceOut);
+  z-index: 99;
+}
+#view.page-home.ng-enter{
+  @include animation();
+  @include effect(zoomInUp);
+  z-index: 100;
+}
+
+#view.page-home.ng-leave{
+  @include animation();
+  @include effect(zoomOutDown);
+  z-index: 99;
+}

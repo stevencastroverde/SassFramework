@@ -1,0 +1,22 @@
+{
+  "name": "stevensassframework",
+  "version": "1.0.0",
+  "description": "collection of scss files I wanted to save",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevencastroverde/SassFramework.git"
+  },
+  "author": "Steven Castroverde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevencastroverde/SassFramework/issues"
+  },
+  "homepage": "https://github.com/stevencastroverde/SassFramework#readme",
+  "devDependencies": {
+    "susy": "^2.2.12"
+  }
+}
